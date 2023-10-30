@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="myForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required maxlength="30">
+        <div class="error" id="nombreError"></div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required maxlength="20">
+        <div class="error" id="emailError"></div>
+
+        <label for "edad">Edad:</label>
+        <input type="number" id="edad" required min="18" max="99">
+        <div class="error" id="edadError"></div>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" required maxlength="200"></textarea>
+        <div class="error" id="mensajeError"></div>
+
+        <button type="button" id="enviar">Enviar Datos</button>
+    </form>
+
+    <div id="resultado" style="display: none;">
+        <h2>Datos ingresados:</h2>
+        <p>Nombre: <span id="nombreMostrado"></span></p>
+        <p>Email: <span id="emailMostrado"></span></p>
+        <p>Edad: <span id="edadMostrada"></span></p>
+        <p>Mensaje: <span id="mensajeMostrado"></span></p>
+        <p>Mensaje enviado</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
